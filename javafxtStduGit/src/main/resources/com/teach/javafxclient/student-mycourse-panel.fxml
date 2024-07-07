@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<!--  学生管理 FXML 配置文件 对应的页面交互控制类 com.teach.javafxclient.controller.StudentController 如果是切换成本地开发模式 界面配置不变，将页面交互控制类 切换为 com.teach.javafxclient.controller.StudentControllerLocal-->
+<!-- 学生个人简历界面 FXML配置文件 对应页面交互控制类 com.teach.javafxclient.controller.StudentIntroduceController -->
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafxclient.controller.StuMyCourseController">
+    <top>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        </HBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.6979797979797979" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <TableView fx:id="dataTableView">
+                    <columns>
+                        <TableColumn fx:id="courseCenterNumColumn" prefWidth="200.0" text="课序号" />
+                        <TableColumn fx:id="courseCenterNameColumn" prefWidth="100.0" text="课程名" />
+                        <TableColumn fx:id="courseCenterCreditColumn" prefWidth="125.0" text="学分" />
+                        <TableColumn fx:id="courseCenterTimeColumn" prefWidth="185.0" text="上课时间" />
+                        <TableColumn fx:id="courseCenterPlaceColumn" prefWidth="325" text="上课地址" />
+                    </columns>
+                </TableView>
+                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+
+                    <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="36.0">
+                        <Button onAction="#onDeleteButtonClick" prefHeight="25.0" prefWidth="115.0" text="退课" />
+                    </FlowPane>
+                     <Button mnemonicParsing="false" onAction="#onRefreshButtonClick" prefHeight="17.0" prefWidth="114.0" text="刷新" />
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>

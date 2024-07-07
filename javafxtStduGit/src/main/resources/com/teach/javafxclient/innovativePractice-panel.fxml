@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--  学生管理 FXML 配置文件 对应的页面交互控制类 com.teach.javafxclient.controller.InnovativePracticeController 如果是切换成本地开发模式 界面配置不变，将页面交互控制类 切换为 com.teach.javafxclient.controller.InnovativePracticeControllerLocal-->
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafxclient.controller.InnovativePracticeController">
+    <top>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+            <children>
+                <FlowPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="添加">
+                            <FlowPane.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </FlowPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="删除">
+                            <FlowPane.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </FlowPane.margin>
+                        </Button>
+                    </children>
+                </FlowPane>
+                <FlowPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                <FlowPane alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label prefWidth="49.0" text="编号名称">
+                            <FlowPane.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </FlowPane.margin></Label>
+                        <TextField fx:id="ipnumIpnameField" prefWidth="100.0">
+                            <FlowPane.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </FlowPane.margin></TextField>
+                        <Button mnemonicParsing="false" onAction="#onQueryButtonClick" text="查询">
+                            <FlowPane.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </FlowPane.margin></Button>
+                    </children>
+                </FlowPane>
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.4275184275184275" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <TableView fx:id="dataTableView">
+                    <columns>
+                        <TableColumn fx:id="ipnumColumn" prefWidth="90.0" text="创新实践编号" />
+                        <TableColumn fx:id="ipkindsColumn" prefWidth="80.0" text="创新实践种类" />
+                        <TableColumn fx:id="ipnameColumn" prefWidth="160.0" text="创新实践名称" />
+                        <TableColumn fx:id="iptimeColumn" prefWidth="160.0" text="时间" />
+                        <TableColumn fx:id="ipplaceColumn" prefWidth="250.0" text="地点" />
+                        <TableColumn fx:id="iporgColumn" prefWidth="200.0" text="组织单位" />
+                        <TableColumn fx:id="iphonorColumn" prefWidth="160.0" text="获得荣誉" />
+                        <TableColumn fx:id="ipcontentColumn" prefWidth="250.0" text="创新内容" />
+                        <TableColumn fx:id="numColumn" prefWidth="160.0" text="学号" />
+                        <TableColumn fx:id="nameColumn" prefWidth="120.0" text="姓名" />
+                    </columns>
+                </TableView>
+                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <GridPane hgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="67.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label text="活动编号" GridPane.rowIndex="0" />
+                            <TextField fx:id="ipnumField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Label text="活动种类" GridPane.rowIndex="1" />
+                            <ComboBox fx:id="ipkindsComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Label text="活动名称" GridPane.rowIndex="2" />
+                            <TextField fx:id="ipnameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <Label text="活动时间" GridPane.rowIndex="3" />
+                            <DatePicker fx:id="iptimePick" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <Label text="活动地点" GridPane.rowIndex="4" />
+                            <TextField fx:id="ipplaceField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                            <Label text="组织单位" GridPane.rowIndex="5" />
+                            <TextField fx:id="iporgField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            <Label text="获得荣誉" GridPane.rowIndex="6" />
+                            <TextField fx:id="iphonorField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                            <Label text="创新内容" GridPane.rowIndex="7" />
+                            <TextField fx:id="ipcontentField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                            <Label text="学号" GridPane.rowIndex="8" />
+                            <TextField fx:id="numField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                            <Label text="姓名" GridPane.rowIndex="9" />
+                            <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        </children>
+                    </GridPane>
+                    <Button onAction="#onSaveButtonClick" text="保存" />
+                    <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="36.0">
+
+                    </FlowPane>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>

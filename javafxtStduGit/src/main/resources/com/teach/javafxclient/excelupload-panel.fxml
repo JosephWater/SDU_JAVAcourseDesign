@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafxclient.controller.ExcelController">
+    <children>
+        <ComboBox fx:id="tableComboBox" promptText="选择目标表"/>
+        <Button text="选择文件" onAction="#handleChooseFile"/>
+        <Button fx:id="uploadButton" text="上传文件" onAction="#handleUploadFile" disable="true"/>
+    </children>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <spacing>
+        10
+    </spacing>
+</VBox>
+

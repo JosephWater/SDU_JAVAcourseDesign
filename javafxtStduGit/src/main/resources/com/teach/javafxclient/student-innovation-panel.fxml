@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<?import javafx.scene.control.TextArea?>
+
+
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0" stylesheets="@css/person-style-class.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafxclient.controller.StudentInnovativeController">
+    <content>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+            <TableView fx:id="innovativePracticeTable" prefHeight="1000.0" prefWidth="1900.0">
+                <columns>
+                    <TableColumn fx:id="ipnumColumn" prefWidth="90.0" text="创新实践编号" />
+                    <TableColumn fx:id="ipkindsColumn" prefWidth="150.0" text="创新实践种类" />
+                    <TableColumn fx:id="ipnameColumn" prefWidth="150.0" text="创新实践名称" />
+                    <TableColumn fx:id="iptimeColumn" prefWidth="150.0" text="时间" />
+                    <TableColumn fx:id="ipplaceColumn" prefWidth="150.0" text="地点" />
+                    <TableColumn fx:id="iporgColumn" prefWidth="150.0" text="组织单位" />
+                    <TableColumn fx:id="iphonorColumn" prefWidth="150.0" text="获得荣誉" />
+                    <TableColumn fx:id="ipcontentColumn" prefWidth="150.0" text="创新内容" />
+                </columns>
+            </TableView>
+        </VBox>
+    </content>
+</ScrollPane>

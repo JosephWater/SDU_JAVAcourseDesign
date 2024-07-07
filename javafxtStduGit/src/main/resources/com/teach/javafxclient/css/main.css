@@ -1,0 +1,147 @@
+/* 根节点背景颜色 */
+.root {
+    -fx-background-color: white;
+}
+
+/* 顶部区域样式 */
+#topSection {
+    -fx-background-color: #9b0d14; /* 设置上侧区域的背景颜色为淡蓝色 */
+    -fx-padding: 10px; /* 添加一些内边距 */
+}
+
+/* 菜单栏样式 不知道干什么的但别动*/
+.menu-bar {
+    -fx-background-color: #9b0d14;
+    -fx-background-insets: 0; /* 移除内边距 */
+    -fx-border-radius: 0; /* 移除圆角 */
+    -fx-background-radius: 0; /* 移除背景圆角 */
+    -fx-padding: 0; /* 移除填充 */
+    -fx-pref-width: 100%; /* 设置宽度为100% */
+    -fx-text-fill:white; /* 设置菜单项文字颜色 */
+}
+
+/* 菜单项样式 */
+.menu {
+    -fx-background-color: #9b0d14;
+    -fx-background-radius: 0; /* 移除圆角 */
+    -fx-font-size: 16px;
+    -fx-text-fill: black; /* 设置菜单项文字颜色 */
+}
+.menu-item {
+    -fx-text-fill: black; /* 设置子菜单项文字颜色 */
+}
+
+/* 按钮样式 */
+.button {
+    -fx-background-radius: 1px;
+    -fx-font-weight: bold;
+    -fx-background-color: #9b0d14;
+    -fx-text-fill: rgba(255,255,255,0.8);
+}
+.button:hover {
+    -fx-background-color: #BE2626;
+}
+
+/* 面板样式 */
+.pane {
+    -fx-background-image: url("1233.png");
+    -fx-background-size: cover;
+}
+
+/* 表格视图样式 */
+.table-view {
+    -fx-background-color: white;
+}
+.table-column {
+    -fx-background-color: rgba(255,255,255,0.1);
+}
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, white;
+}
+.table-view .column-header {
+    -fx-background-color:  #9b0d14;
+    -fx-background-insets: 0, 1;
+}
+/*表格第一行的颜色*/
+.table-view .column-header-background .label {
+    -fx-text-fill:white;
+}
+.table-view .filler {
+    -fx-background-color: #9b0d14;
+}
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:filled:selected {
+    -fx-background-color:  #9b0d14;
+}
+
+/* 菜单栏 */
+.label {
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+.label:hover {
+    -fx-background-color: #BE2626;
+}
+/* VBox样式 */
+.Vbox {
+    -fx-background-color: rgba(255,255,255,0);
+}
+
+/* 标签页样式 */
+.tab {
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-background-color: white;
+}
+/*菜单标签*/
+.tab-pane > *.tab-header-area > *.tab-header-background {
+    -fx-background-color:#9b0d14;
+}
+
+/* 表格行和单元格边框样式 */
+.table-row-cell .table-cell {
+    -fx-border-color: rgba(0,0,0,0.15);
+}
+.table-view .table-row-cell {
+    -fx-border-top-color: #BE2626;
+    -fx-border-bottom-color: rgba(0,0,0,0);
+}
+
+/* 暗模式样式 */
+.fxml[theme='dark-mode'] {
+    -fx-filter: invert(1) hue-rotate(180deg);
+}
+
+/* 文本框样式 */
+.text-field {
+    -fx-background-radius: 2;
+}
+
+/* 动画效果 */
+#title {
+    animation-duration: 0.3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        -fx-background-color: #BE2626;
+        -fx-text-fill: rgba(255,255,255,0);
+    }
+    to {
+        -fx-background-color: #BE2626;
+        -fx-text-fill: rgba(255,255,255,1);
+    }
+}
+
+/* 特定面板样式 */
+#onePane {
+    -fx-background-color: rgba(255,255,255,1);
+}
+
+/* 下拉框样式 */
+.combo-box {
+    -fx-text-fill: black;
+    -fx-background-color: #BE2626;
+    -fx-border-radius: 10;
+    -fx-background-radius: 100;
+    -fx-padding: 5;
+}

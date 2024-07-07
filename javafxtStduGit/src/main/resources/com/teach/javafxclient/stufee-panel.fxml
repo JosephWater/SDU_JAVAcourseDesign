@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0" stylesheets="@css/person-style-class.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafxclient.controller.Stu_fee_informationController">
+    <content>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+            <TableView fx:id="feeTable" prefHeight="1000.0" prefWidth="1900.0">
+                <columns>
+                    <TableColumn fx:id="itemColumn" prefWidth="390.4000182747841" text="消费物品" />
+                    <TableColumn fx:id="placeColumn" prefWidth="400.1999206542969" text="消费地点" />
+                    <TableColumn fx:id="dayColumn" prefWidth="200" text="消费时间" />
+                    <TableColumn fx:id="moneyColumn" prefWidth="200" text="消费金额" />
+                    <TableColumn fx:id="wayColumn" prefWidth="211.7999267578125" text="消费方式" />
+                </columns>
+            </TableView>
+        </VBox>
+    </content>
+</ScrollPane>

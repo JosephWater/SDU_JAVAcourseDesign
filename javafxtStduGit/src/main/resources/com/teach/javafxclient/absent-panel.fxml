@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--  学生管理 FXML 配置文件 对应的页面交互控制类 com.teach.javafxclient.controller.StudentController 如果是切换成本地开发模式 界面配置不变，将页面交互控制类 切换为 com.teach.javafxclient.controller.StudentControllerLocal-->
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teach.javafxclient.controller.AbsentController">
+    <top>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+            <children>
+                <Pane prefWidth="0.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Button layoutX="59.0" layoutY="3.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="删除" />
+                        <Button layoutX="7.0" layoutY="3.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="添加" />
+                    </children></Pane>
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.6979797979797979" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <TableView fx:id="dataTableView" prefHeight="970.0" prefWidth="484.0">
+                    <columns>
+                        <TableColumn fx:id="absentTypeColumn" prefWidth="90" text="请假类型" />
+                        <TableColumn fx:id="startDateColumn" prefWidth="150" text="请假开始时间" />
+                        <TableColumn fx:id="endDateColumn" prefWidth="150" text="请假结束时间" />
+                        <TableColumn fx:id="absentReasonColumn" prefWidth="150" text="请假原因" />
+                        <TableColumn fx:id="absentreqColumn" prefWidth="150" text="审批状态" />
+                    </columns>
+                </TableView>
+                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="300.0" spacing="20.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <GridPane hgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="67.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="193.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label text="请假类型" GridPane.rowIndex="5" />
+                            <ComboBox fx:id="absentTypeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            <Label text="请假开始时间" GridPane.rowIndex="6" />
+                            <DatePicker fx:id="startDatePick" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                            <Label text="请假结束时间" GridPane.rowIndex="7" />
+                            <DatePicker fx:id="endDatePick" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                            <Label text="请假原因" GridPane.rowIndex="8" />
+                            <TextField fx:id="absentReasonField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                            <!--<Label text="审批状态" GridPane.rowIndex="9" />
+                            <Label fx:id="absentreq" GridPane.columnIndex="1" GridPane.rowIndex="9" />-->
+                        </children>
+                    </GridPane>
+
+                    <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="36.0" />
+                    <Button onAction="#onApplyButtonClick" prefHeight="30.0" prefWidth="74.0" text="申请">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Button>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>
